@@ -1,0 +1,13 @@
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('form').submit((e) => {
+      var pattern = /^\b[A-Z0-9._%-]+@getmainstreet.com\b$/i
+      var email = $('#companyEmail').val()
+
+      if (email.length > 0 && (!pattern.test(email))) {
+        alert('Email is not valid')
+        return false
+      }
+    });
+  });
+</script>
